@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="10dp"
+    >
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="30dp"
+
+        android:elevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_s_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_s_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".96" />
+
+            <EditText
+                android:id="@+id/a3_target_name_p"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato_black"
+                android:gravity="center|center_vertical"
+                android:hint="Target Name"
+
+                android:textColor="@drawable/edit_text_color_text"
+                android:backgroundTint="@drawable/edit_text_color_text"
+                android:textCursorDrawable="@null"
+
+                android:inputType="textCapWords"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/a3_target_total_p"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/a3_target_total_p"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Total Work"
+                android:textColor="@color/lic_black"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@id/a3_target_done"
+                app:layout_constraintEnd_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_name_p" />
+
+            <EditText
+                android:id="@+id/a3_target_input_total_p"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="16sp"
+
+                android:autoSizeMinTextSize="14dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@drawable/edit_text_color_text"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:inputType="numberSigned"
+
+                android:hint="150"
+                android:textColor="@drawable/edit_text_color_text"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/a3_target_total_p"
+                app:layout_constraintBottom_toTopOf="@id/a3_target_input_done_p"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_name_p" />
+
+            <TextView
+                android:id="@+id/a3_target_done"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Done Work"
+                android:textColor="@color/lic_black"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@id/a3_target_day_tv"
+                app:layout_constraintEnd_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_total_p" />
+
+            <EditText
+                android:id="@+id/a3_target_input_done_p"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="16sp"
+
+                android:autoSizeMinTextSize="14dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@drawable/edit_text_color_text"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:inputType="numberSigned"
+
+                android:hint="10"
+                android:textColor="@drawable/edit_text_color_text"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/a3_target_done"
+                app:layout_constraintBottom_toTopOf="@id/a3_target_day__input_p"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_input_total_p" />
+
+            <TextView
+                android:id="@+id/a3_target_day_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Day Remaining"
+                android:textColor="@color/lic_black"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@id/a3_p_save"
+                app:layout_constraintEnd_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_done" />
+
+            <EditText
+                android:id="@+id/a3_target_day__input_p"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="16sp"
+
+                android:autoSizeMinTextSize="14dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@drawable/edit_text_color_text"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:inputType="numberSigned"
+
+                android:hint="15 Day"
+                android:textColor="@drawable/edit_text_color_text"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/a3_target_day_tv"
+                app:layout_constraintBottom_toTopOf="@id/a3_p_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_input_done_p" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/a3_p_save"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+
+                android:layout_marginTop="16dp"
+
+                android:fontFamily="@font/lato_black"
+                android:gravity="center|center_vertical"
+                android:visibility="visible"
+                android:text="Save"
+                android:textColor="@color/navy_blue"
+                android:textStyle="bold"
+
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/aqua_green"
+                android:elevation="10dp"
+
+                app:layout_constraintEnd_toEndOf="@id/guideline_s_r"
+                app:layout_constraintStart_toStartOf="@id/guideline_s_l"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a3_target_day_tv"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_card_5v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

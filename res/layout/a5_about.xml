@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blur_white"
+    tools:context=".a5_about">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_back_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10" />
+
+    <ImageButton
+        android:id="@+id/a5_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/back_black"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_heading"
+        app:layout_constraintEnd_toEndOf="@id/guideline_back_e"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/a5_heading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="22dp"
+        android:autoSizeMinTextSize="18dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center"
+        android:text="About iFly"
+        android:textColor="@color/pink_red"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_heading"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vik_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vik_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".60" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="10dp"
+        android:background="@drawable/cardview_back"
+        android:elevation="10dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_vik_b"
+        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+        app:layout_constraintStart_toStartOf="@id/guideline_l"
+        app:layout_constraintTop_toTopOf="@id/guideline_vik_a">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="end"
+
+            android:adjustViewBounds="true"
+            android:src="@drawable/vikrant" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_card_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".61" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_card_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="10dp"
+        android:background="@drawable/cardview_back"
+        android:elevation="10dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_card_b"
+        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+        app:layout_constraintStart_toStartOf="@id/guideline_l"
+        app:layout_constraintTop_toTopOf="@id/guideline_card_a">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_desc_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".10" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_desc_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_copy_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".9" />
+
+            <TextView
+                android:id="@+id/a5_desc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:autoSizeMaxTextSize="16sp"
+                android:autoSizeMinTextSize="14dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Created By Vikrant Pandey "
+                android:textColor="@color/navy_blue"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/guideline_desc_b"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline_desc_a"
+
+                />
+
+            <View
+                android:id="@+id/small_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guideline_desc_b"
+                />
+
+            <TextView
+                android:id="@+id/a5_copy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Copyright © Vikrant Pandey\n 2022 \nVersion 1.1"
+                android:textColor="@color/navy_blue"
+
+                app:layout_constraintBottom_toTopOf="@+id/guideline_copy_b"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline_desc_b"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/a5_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="horizontal"
+
+        app:itemIconTint="@drawable/nav_item_color"
+        app:itemTextColor="@drawable/nav_item_color"
+        app:labelVisibilityMode="labeled"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

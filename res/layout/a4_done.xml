@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_blur_white"
+    tools:context=".a4_done">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_back_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".10" />
+
+    <ImageButton
+        android:id="@+id/a4_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/back_black"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_heading"
+        app:layout_constraintEnd_toEndOf="@id/guideline_back_e"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/a4_heading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="22dp"
+        android:autoSizeMinTextSize="18dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center"
+        android:text="Today's Success"
+        android:textColor="@color/pink_red"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_heading"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_grid_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".07" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cardview_back"
+        android:elevation="10dp"
+        app:cardCornerRadius="20dp"
+
+        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+        app:layout_constraintStart_toStartOf="@id/guideline_l"
+        app:layout_constraintTop_toTopOf="@id/guideline_grid_A">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_s_l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".04" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_s_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".96" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_card_5v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <TextView
+                android:id="@+id/a4_done_target_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="10dp"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato_black"
+                android:gravity="center|center_vertical"
+                android:text="Mathematics"
+                android:textColor="@color/black"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@+id/a4_done_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/a4_done_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Done Today"
+                android:textColor="@color/lic_black"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toTopOf="@id/a4_done_detail_tv"
+                app:layout_constraintEnd_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a4_done_target_name" />
+
+            <EditText
+                android:id="@+id/a4_done_input"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+
+                android:autoSizeMaxTextSize="16sp"
+
+                android:autoSizeMinTextSize="14dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@drawable/edit_text_color_text"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:inputType="numberSigned"
+
+                android:hint="02"
+                android:textColorHint="@color/navy_blue"
+                android:textColor="@drawable/edit_text_color_text"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/a4_done_tv"
+                app:layout_constraintBottom_toTopOf="@id/a4_done_detail_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintTop_toBottomOf="@id/a4_done_target_name" />
+
+            <TextView
+                android:id="@+id/a4_done_detail_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="16dp"
+                android:autoSizeTextType="uniform"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:text="Work Detail"
+                android:textColor="@color/lic_black"
+
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/a4_done_tv" />
+
+            <EditText
+                android:id="@+id/a4_done_detail_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+
+                android:autoSizeMaxTextSize="16sp"
+
+                android:autoSizeMinTextSize="14dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@drawable/edit_text_color_text"
+
+                android:fontFamily="@font/lato"
+                android:gravity="center|center_vertical"
+                android:inputType="text|textAutoComplete|textCapWords|textMultiLine"
+
+                android:hint="edit"
+                android:textColorHint="@color/navy_blue"
+                android:textColor="@drawable/edit_text_color_text"
+                android:textCursorDrawable="@null"
+                android:textStyle="bold"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/a4_done_detail_tv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline_card_5v"
+                app:layout_constraintTop_toBottomOf="@id/a4_done_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/a4_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:orientation="horizontal"
+
+        app:itemIconTint="@drawable/nav_item_color"
+        app:itemTextColor="@drawable/nav_item_color"
+        app:labelVisibilityMode="labeled"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

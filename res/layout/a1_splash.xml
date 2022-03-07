@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".a1_splash">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_img_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_pb_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_pb_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_img_btm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_pb_btm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+
+    <ImageView
+        android:id="@+id/a1_app_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:src="@drawable/ifly_logo"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline_img_btm"
+        app:layout_constraintEnd_toEndOf="@id/guideline_r"
+        app:layout_constraintStart_toStartOf="@id/guideline_l"
+        app:layout_constraintTop_toTopOf="@+id/guideline_img_top" />
+
+    <ProgressBar
+        android:id="@+id/a1_progressbar"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+
+        android:progressDrawable="@drawable/a1_pb_bg"
+        android:indeterminateDrawable="@drawable/a1_pb_bg"
+        android:progressTint="@color/pink_red"
+
+        app:layout_constraintBottom_toBottomOf="@id/guideline_pb_btm"
+        app:layout_constraintEnd_toEndOf="@id/guideline_pb_r"
+        app:layout_constraintStart_toStartOf="@id/guideline_pb_l"
+        app:layout_constraintTop_toBottomOf="@id/guideline_img_btm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
