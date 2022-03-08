@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d8d7d4b7-2036-43aa-b974-82f1da9ca746" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_launcher-playstore.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/TargetDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/TargetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/TargetTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/TargetViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/Universal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a1_splash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a2_home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a2_home_adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a2_home_item_container.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_adapter_target.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_data_target.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_list_adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_popup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_target.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_target_popup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a3_target_viewholder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a4_done.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a5_about.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a6_edit_adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/a6_edit_schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/com/ifly/mDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/anim/a1_splash_logo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/a1_pb_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/add_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/back_black.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/cardview_back.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/edit_text_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/edit_text_color_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/ifly_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/nav_about.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/nav_done.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/nav_item_color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/nav_target.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/nav_today.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/progress_back.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/round_corner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/drawable/vikrant.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/font/lato.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/font/lato_black.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a1_splash.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a2_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a2_home_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a3_item_target.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a3_target.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a3_target_popup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a4_done.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a5_about.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a6_edit_schedule.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/layout/a6_edit_schedule_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/menu/menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/font_certs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/preloaded_fonts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/values/themes.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="263sxTMPcq7GzBU13lOyO3oIsBi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8d7d4b7-2036-43aa-b974-82f1da9ca746" name="Default Changelist" comment="" />
+      <created>1646663853215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646663853215</updated>
+    </task>
+    <servers />
+  </component>
+</project>

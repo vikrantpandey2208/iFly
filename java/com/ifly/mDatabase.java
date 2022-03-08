@@ -12,10 +12,12 @@ import java.lang.annotation.Target;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {TargetTable.class}, version = 1, exportSchema = false)
+@Database(entities = {TargetTable.class,DoneTable.class,ScheduleTable.class}, version = 4, exportSchema = false)
 public abstract class mDatabase extends RoomDatabase {
 
     public abstract TargetDao targetDao();
+    public abstract DoneDao doneDao();
+    public abstract ScheduleDao scheduleDao();
 
     private static volatile mDatabase INSTANCE;
 
@@ -31,6 +33,8 @@ public abstract class mDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             mDatabase.class, "ifly_database")
                             .addCallback(DatabaseCallback)
+                            .fallbackToDestructiveMigration()
+                            .createFromAsset("schedule_db.db")
                             .build();
                 }
             }
@@ -48,6 +52,8 @@ public abstract class mDatabase extends RoomDatabase {
                 // Populate the database in the background.
                 // If you want to start with more words, just add them.
                 TargetDao dao = INSTANCE.targetDao();
+                DoneDao doneDao = INSTANCE.doneDao();
+                ScheduleDao scheduleDao = INSTANCE.scheduleDao();
 
             });
         }

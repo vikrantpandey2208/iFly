@@ -10,6 +10,7 @@ import java.util.List;
 
 @Dao
 public interface TargetDao {
+    boolean fal = false;
     @Insert(onConflict = OnConflictStrategy.ABORT)
     void insert(TargetTable target);
 
@@ -24,4 +25,10 @@ public interface TargetDao {
 
     @Query("UPDATE target_table SET totalWork=:newTotal WHERE target_id = :id")
     void updateTotalWork(int newTotal, int id);
+
+    @Query("UPDATE target_table SET doneWork= doneWork+ :addDone  WHERE target_id = :id")
+    void updateAddToDoneWork(int addDone, int id);
+
+    @Query("SELECT * FROM target_table where isDone = 0")
+    LiveData<List<TargetTable>> getNotDoneTargets();
 }

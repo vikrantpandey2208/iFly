@@ -1,37 +1,34 @@
 package com.ifly;
 
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.ViewGroup;
-import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
-
-public class a3_list_adapter extends ListAdapter<TargetTable, a3_target_viewholder> {
+public class a4_list_adapter extends ListAdapter<TargetTable, a4_viewholder> {
     String TAG = "vik";
 
-    public a3_list_adapter(@NonNull DiffUtil.ItemCallback<TargetTable> diffCallback) {
+    protected a4_list_adapter(@NonNull DiffUtil.ItemCallback<TargetTable> diffCallback) {
         super(diffCallback);
     }
 
     @NonNull
     @Override
-    public a3_target_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return a3_target_viewholder.create(parent);
+    public a4_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return a4_viewholder.create(parent);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull a3_target_viewholder holder, int position) {
+    public void onBindViewHolder(@NonNull a4_viewholder holder, int position) {
+
         TargetTable current = getItem(position);
-        holder.bind(new a3_data_target(
-                current.getId(),
-                current.getTargetName(), current.getTotalWork(), current.getDoneWork(),
-                current.getDayRemaining(), current.getExpectedDate()
-        ));
+        if (position != getItemCount()-1) {
+            holder.bind(current.getTargetName(), current.getId());
+        }else {
+            holder.bind(current.getTargetName(), current.getId(),true);
+        }
     }
 
     static class TargetDiff extends DiffUtil.ItemCallback<TargetTable> {

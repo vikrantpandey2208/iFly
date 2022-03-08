@@ -13,71 +13,70 @@ import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class a4_done extends AppCompatActivity {
+public class a7_work_details extends AppCompatActivity {
     Universal universal = new Universal();
-    private TargetViewModel targetViewModel;
+    private DoneViewModel doneViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.a4_done);
+        setContentView(R.layout.a7_work_details);
 
-        universal.SetStatusBar(a4_done.this);
+        universal.SetStatusBar(a7_work_details.this);
         SetBottomNavigation();
         BackButton();
         SetAdapter();
     }
-
     private void SetAdapter() {
-        RecyclerView recyclerView = findViewById(R.id.a4_recycler);
+        RecyclerView recyclerView = findViewById(R.id.a7_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        a4_list_adapter adapter = new a4_list_adapter(new a4_list_adapter.TargetDiff());
+        a7_ListAdapter adapter = new a7_ListAdapter(new a7_ListAdapter.TargetDiff());
         recyclerView.setAdapter(adapter);
 
-        targetViewModel = new ViewModelProvider(this).get(TargetViewModel.class);
+        doneViewModel = new ViewModelProvider(this).get(DoneViewModel.class);
 
-        targetViewModel.getNotDoneTargets().observe(this, targetTables -> {
-            targetTables.add(new TargetTable(
-                    "Check Work History",
-                                0,0,0,"-1",false
-                    ));
-                    adapter.submitList(targetTables);
+        doneViewModel.getAllDoneDetails().observe(this, doneTables -> {
+
+                    adapter.submitList(doneTables);
                 }
         );
     }
 
     private void BackButton() {
-        ImageButton back = findViewById(R.id.a4_back);
+        ImageButton back = findViewById(R.id.a7_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                universal.FinishActivity(a4_done.this);
+                universal.FinishActivity(a7_work_details.this);
             }
         });
     }
     private void SetBottomNavigation() {
-        BottomNavigationView bottomNavigationView = findViewById(R.id.a4_navigation);
-        bottomNavigationView.getMenu().findItem(R.id.menu_done).setChecked(true);
-
+        BottomNavigationView bottomNavigationView = findViewById(R.id.a7_navigation);
+        bottomNavigationView.getMenu().setGroupCheckable(0, false, true);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.menu_today: {
-                        a4_done.this.finish();
+                        universal.OpenGivenActivity(a7_work_details.this, a2_home.class,true);
+                        finishAffinity();
                         break;
                     }
                     case R.id.menu_done: {
+                        a7_work_details.this.finish();
                         break;
                     }
                     case R.id.menu_target: {
-                        universal.OpenGivenActivity(a4_done.this, a3_target.class,true);
+                        universal.OpenGivenActivity(a7_work_details.this, a3_target.class,true);
+                        finishAffinity();
                         break;
                     }
                     case R.id.menu_about: {
-                        universal.OpenGivenActivity(a4_done.this, a5_about.class, true);
+                        universal.OpenGivenActivity(a7_work_details.this, a5_about.class, true);
+                        finishAffinity();
                         break;
                     }
                 }

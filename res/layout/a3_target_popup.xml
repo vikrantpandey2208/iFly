@@ -128,7 +128,7 @@
 
                 android:fontFamily="@font/lato"
                 android:gravity="center|center_vertical"
-                android:text="Done Work"
+                android:text="@string/done_work"
                 android:textColor="@color/lic_black"
 
                 android:textStyle="bold"

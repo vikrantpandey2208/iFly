@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IFly">
-        <activity android:name=".a6_edit_schedule"></activity>
+        <activity android:name=".a7_work_details"></activity>
+        <activity android:name=".a6_edit_schedule" />
         <activity android:name=".a5_about" />
         <activity android:name=".a4_done" />
         <activity android:name=".a3_target" />
         <activity android:name=".a2_home" />
-        <activity android:name=".a3_popup"/>
+        <activity android:name=".a3_popup" />
         <activity
             android:name=".a1_splash"
             android:exported="true"

@@ -41,10 +41,10 @@ public class a6_edit_adapter extends BaseAdapter {
         } else {
             view = convertView;
         }
-        TextView slot = view.findViewById(R.id.a6_edit_slot);
+//        TextView slot = view.findViewById(R.id.a6_edit_slot);
         TextView work = view.findViewById(R.id.a6_edit_work);
 
-        slot.setText(list.get(position).slot);
+//        slot.setText(list.get(position).slot);
         work.setText(list.get(position).work);
 
         if (position == list.size() - 1) {

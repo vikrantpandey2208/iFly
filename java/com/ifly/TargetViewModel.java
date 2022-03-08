@@ -13,12 +13,14 @@ public class TargetViewModel extends AndroidViewModel {
     private TargetRepository mRepository;
     private final LiveData<List<TargetTable>> allTargets;
     private final LiveData<List<TargetTable>> remainingDayAsc;
+    private final LiveData<List<TargetTable>> getNotDoneTargets;
 
     public TargetViewModel(@NonNull Application application) {
         super(application);
         mRepository = new TargetRepository(application);
         allTargets = mRepository.getAllTargetLiveData();
         remainingDayAsc = mRepository.getRemainingDayAsc();
+        getNotDoneTargets = mRepository.getGetNotDoneTargets();
     }
 
     LiveData<List<TargetTable>> getAllTargets() {
@@ -29,11 +31,11 @@ public class TargetViewModel extends AndroidViewModel {
         mRepository.insert(target);
     }
 
-    public void updateTotalWork(int newTotal, int id) {
-        mRepository.updateTotalWork(newTotal, id);
-    }
-
     public LiveData<List<TargetTable>> getRemainingDayAsc() {
         return remainingDayAsc;
+    }
+
+    public LiveData<List<TargetTable>> getNotDoneTargets() {
+        return getNotDoneTargets;
     }
 }

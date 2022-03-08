@@ -4,21 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-    android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
     android:background="@drawable/cardview_back"
     android:elevation="10dp"
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="20dp"
 
+    app:layout_constraintEnd_toEndOf="@id/guideline_r"
+    app:layout_constraintStart_toStartOf="@id/guideline_l"
+    app:layout_constraintTop_toTopOf="@id/guideline_grid_A">
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/a7_item_const_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
+        android:layout_height="wrap_content"
 
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
 
         android:orientation="vertical">
 
@@ -36,13 +38,18 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent=".96" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_card_5v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".4" />
 
         <TextView
-            android:id="@+id/a6_edit_slot_tv"
+            android:id="@+id/a7_detail_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="10dp"
 
             android:autoSizeMaxTextSize="18sp"
             android:autoSizeMinTextSize="16dp"
@@ -50,67 +57,53 @@
 
             android:fontFamily="@font/lato_black"
             android:gravity="center|center_vertical"
-            android:text="Slot"
-            android:textColor="@color/black"
+            android:text="08-Mar-2021"
+            android:textColor="@color/navy_blue"
 
             android:textStyle="bold"
 
-            app:layout_constraintBottom_toTopOf="@+id/a6_edit_work"
+            app:layout_constraintBottom_toTopOf="@+id/a7_target_name_show"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            />
-
-        <EditText
-            android:id="@+id/a6_edit_work"
+        <TextView
+            android:id="@+id/a7_target_name_show"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
             android:layout_marginTop="10dp"
-            android:backgroundTint="@drawable/edit_text_color_text"
 
-            android:fontFamily="@font/lato"
-
-            android:gravity="center|center_vertical"
-            android:inputType="textCapWords|textMultiLine"
-
-            android:hint="complete mathematics"
-            android:textColor="@drawable/edit_text_color_text"
-            android:textCursorDrawable="@null"
-            android:autoSizeMaxTextSize="16sp"
-            android:autoSizeMinTextSize="14dp"
-            android:autoSizeTextType="uniform"
-
-            app:layout_constraintBottom_toTopOf="@id/a6_update"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/a6_edit_slot_tv"
-            />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/a6_update"
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-
-            android:layout_marginTop="16dp"
-
-            android:background="@drawable/round_corner"
-            android:backgroundTint="@color/aqua_green"
-            android:elevation="10dp"
+            android:textSize="16dp"
 
             android:fontFamily="@font/lato_black"
             android:gravity="center|center_vertical"
-            android:text="Update"
+            android:text="Mathematics"
+            android:textColor="@color/lic_black"
 
-            android:textColor="@color/navy_blue"
             android:textStyle="bold"
-            android:visibility="gone"
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideline_s_r"
-            app:layout_constraintStart_toStartOf="@id/guideline_s_l"
-            app:layout_constraintTop_toBottomOf="@id/a6_edit_work" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/a7_detail_date" />
+        <TextView
+            android:id="@+id/a7_work_detail_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
 
+            android:layout_marginTop="10dp"
+
+            android:textSize="16dp"
+
+            android:fontFamily="@font/lato"
+            android:gravity="center|center_vertical"
+            android:text="Done Mensuration"
+            android:textColor="@color/lic_black"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/a7_target_name_show" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">iFly</string>
-    <string name="hint_word">Word…</string>
-    <string name="button_save">Save</string>
-    <string name="empty_not_saved">Target not saved because it is empty.</string>
+    <string name="empty_not_saved">Not saved because it is empty.</string>
+    <string name="only_after_9">Edit after 9 PM.</string>
+    <string name="done_work">Done Work</string>
+    <string name="day_remaining">Day Remaining</string>
+    <string name="expected_date">Expected Date</string>
 </resources>

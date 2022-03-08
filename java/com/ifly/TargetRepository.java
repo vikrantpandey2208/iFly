@@ -10,6 +10,7 @@ public class TargetRepository {
     private TargetDao targetDao;
     private LiveData<List<TargetTable>> allTargetLiveData;
     private LiveData<List<TargetTable>> getRemainingDayAsc;
+    private LiveData<List<TargetTable>> getNotDoneTargets;
 
     TargetRepository(Application application) {
         mDatabase db = mDatabase.getDatabase(application);
@@ -17,6 +18,7 @@ public class TargetRepository {
 
         allTargetLiveData = targetDao.getAlphabetizedTargets();
         getRemainingDayAsc = targetDao.getRemainingDayAsc();
+        getNotDoneTargets = targetDao.getNotDoneTargets();
     }
 
     LiveData<List<TargetTable>> getAllTargetLiveData() {
@@ -37,5 +39,13 @@ public class TargetRepository {
             targetDao.updateTotalWork(newTotal,id);
         });
     }
+    void updateAddToDoneWork(int addDone, int id) {
+        mDatabase.databaseWriteExecutor.execute(() -> {
+            targetDao.updateAddToDoneWork(addDone,id);
+        });
+    }
 
+    public LiveData<List<TargetTable>> getGetNotDoneTargets() {
+        return getNotDoneTargets;
+    }
 }

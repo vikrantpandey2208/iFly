@@ -2,20 +2,29 @@ package com.ifly;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class a6_edit_schedule extends AppCompatActivity {
     Universal universal = new Universal();
+    private ScheduleViewModel scheduleViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,26 +33,36 @@ public class a6_edit_schedule extends AppCompatActivity {
 
         universal.SetStatusBar(a6_edit_schedule.this);
         SetBottomNavigation();
+        SetTodayDate();
         BackButton();
-        SetAdapterGrid();
+        SetAdapter();
     }
-    private void SetAdapterGrid() {
-        GridView gridView = findViewById(R.id.a6_grid);
-        String str = "Edit Your Schedule here";
 
-        List<a2_home_item_container> list= new ArrayList<>();
-        for (int i = 0; i < 17; i++) {
-            list.add(new a2_home_item_container("05:00-06:00 AM",str+i,false));
-        }
+    private void SetAdapter() {
+        RecyclerView recyclerView = findViewById(R.id.a6_recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list.add(new a2_home_item_container("Save Schedule","Now",false));
+        a6_ListAdapter adapter = new a6_ListAdapter(new a6_ListAdapter.TargetDiff());
+        recyclerView.setAdapter(adapter);
 
-        gridView.setAdapter(new a6_edit_adapter(list));
+        scheduleViewModel = new ViewModelProvider(this).get(ScheduleViewModel.class);
+
+        scheduleViewModel.getAllScheduleEntry().observe(this, scheduleTables -> {
+                    adapter.submitList(scheduleTables);
+                }
+        );
     }
+
+    private void SetTodayDate() {
+        TextView tv = findViewById(R.id.a6_heading);
+
+        tv.setText(Universal.TODAY+" (Scheduling)");
+
+    }
+
     private void SetBottomNavigation() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.a6_navigation);
-        bottomNavigationView.getMenu().findItem(R.id.menu_done).setChecked(false);
-
+        bottomNavigationView.getMenu().setGroupCheckable(0, false, true);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

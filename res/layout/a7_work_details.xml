@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_blur_white"
-    tools:context=".a4_done">
+    tools:context=".a7_work_details">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_l"
@@ -36,7 +36,7 @@
         app:layout_constraintGuide_percent=".10" />
 
     <ImageButton
-        android:id="@+id/a4_back"
+        android:id="@+id/a7_back"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginLeft="8dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/a4_heading"
+        android:id="@+id/a7_heading"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoSizeMaxTextSize="22dp"
@@ -54,7 +54,7 @@
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/lato_black"
         android:gravity="center"
-        android:text="Today's Success"
+        android:text="Work History"
         android:textColor="@color/pink_red"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/guideline_heading"
@@ -87,7 +87,7 @@
         app:layout_constraintGuide_percent=".91" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/a4_recycler"
+        android:id="@+id/a7_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
 
@@ -99,7 +99,7 @@
         app:layout_constraintTop_toTopOf="@id/guideline_grid_A" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/a4_navigation"
+        android:id="@+id/a7_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -117,4 +117,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,24 +2,25 @@ package com.ifly;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 public class a2_home extends AppCompatActivity {
     Universal universal = new Universal();
+    private ScheduleViewModel scheduleViewModel;
     private long pressedTime;
 
     @Override
@@ -30,23 +31,26 @@ public class a2_home extends AppCompatActivity {
         universal.SetStatusBar(a2_home.this);
         SetBottomNavigation();
         SetTodayDate();
-        SetAdapterGrid();
-
-
+        SetAdapter();
     }
 
-    private void SetAdapterGrid() {
-        GridView gridView = findViewById(R.id.a2_grid);
-        String str = "Morning activities and walk Morning activities and walkMorning activities and walkMorning activities and walkMorning activities and walkMorning activities and";
+    private void SetAdapter() {
+        RecyclerView recyclerView = findViewById(R.id.a2_recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        List<a2_home_item_container> list= new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            list.add(new a2_home_item_container("05:00-06:00 AM",str+i,false));
-        }
+        a2_ListAdapter adapter = new a2_ListAdapter(new a2_ListAdapter.TargetDiff());
+        recyclerView.setAdapter(adapter);
 
-        list.add(new a2_home_item_container("Edit Schedule","Now",false));
+        scheduleViewModel = new ViewModelProvider(this).get(ScheduleViewModel.class);
 
-        gridView.setAdapter(new a2_home_adapter(list));
+        scheduleViewModel.getAllScheduleEntry().observe(this, scheduleTables -> {
+                    scheduleTables.add(new ScheduleTable(
+                            "Edit Schedule ",
+                            "-1"
+                    ));
+                    adapter.submitList(scheduleTables);
+                }
+        );
     }
 
     private void SetTodayDate() {
@@ -57,6 +61,7 @@ public class a2_home extends AppCompatActivity {
         SimpleDateFormat dayFormat = new SimpleDateFormat("EEEE", Locale.ENGLISH);
 
         String date = formatter.format(today);
+        Universal.TODAY = date;
 
         date += " (";
         date += dayFormat.format(today);

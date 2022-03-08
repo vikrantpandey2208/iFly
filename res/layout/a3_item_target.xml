@@ -142,7 +142,7 @@
 
             android:fontFamily="@font/lato"
             android:gravity="center|center_vertical"
-            android:text="Done Work"
+            android:text="@string/done_work"
             android:textColor="@color/lic_black"
 
             android:textStyle="bold"
@@ -187,7 +187,7 @@
 
             android:fontFamily="@font/lato"
             android:gravity="center|center_vertical"
-            android:text="Day Remaining"
+            android:text="@string/day_remaining"
             android:textColor="@color/lic_black"
 
             android:textStyle="bold"
@@ -233,7 +233,7 @@
 
             android:fontFamily="@font/lato"
             android:gravity="center|center_vertical"
-            android:text="Expected Date"
+            android:text="@string/expected_date"
             android:textColor="@color/lic_black"
 
             android:textStyle="bold"

@@ -9,6 +9,9 @@ import android.view.WindowManager;
 
 public class Universal {
     public static boolean first = true;
+    public static String TODAY = null;
+    public static String A7PREVIOUSDATE  = null;
+
     public void OpenGivenActivity(Context context, Class nextClass) {
         Intent intent = new Intent(context, nextClass);
         context.startActivity(intent);

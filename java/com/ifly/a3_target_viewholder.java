@@ -24,6 +24,8 @@ public class a3_target_viewholder extends RecyclerView.ViewHolder {
     private final ProgressBar progressBar;
     private final AppCompatButton update;
 
+
+
     public a3_target_viewholder(View view) {
         super(view);
         // Define click listener for the ViewHolder's View
