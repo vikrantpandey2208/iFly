@@ -45,7 +45,7 @@ public class a2_home extends AppCompatActivity {
 
         scheduleViewModel.getAllScheduleEntry().observe(this, scheduleTables -> {
                     scheduleTables.add(new ScheduleTable(
-                            "Edit Schedule ",
+                            "last",
                             "-1"
                     ));
                     adapter.submitList(scheduleTables);

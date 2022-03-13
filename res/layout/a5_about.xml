@@ -204,13 +204,13 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
 
-                android:autoSizeMaxTextSize="18sp"
-                android:autoSizeMinTextSize="16dp"
+                android:autoSizeMaxTextSize="16sp"
+                android:autoSizeMinTextSize="14dp"
                 android:autoSizeTextType="uniform"
 
                 android:fontFamily="@font/lato"
                 android:gravity="center|center_vertical"
-                android:text="Copyright © Vikrant Pandey\n 2022 \nVersion 1.1"
+                android:text="@string/copy_and_version"
                 android:textColor="@color/navy_blue"
 
                 app:layout_constraintBottom_toTopOf="@+id/guideline_copy_b"

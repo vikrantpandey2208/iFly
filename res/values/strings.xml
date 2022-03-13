@@ -5,4 +5,5 @@
     <string name="done_work">Done Work</string>
     <string name="day_remaining">Day Remaining</string>
     <string name="expected_date">Expected Date</string>
+    <string name="copy_and_version">Copyright © Vikrant Pandey\n 2022 \nVersion 1.2</string>
 </resources>

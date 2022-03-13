@@ -49,15 +49,7 @@ public class a4_viewholder extends RecyclerView.ViewHolder {
 
                     String newDone = newDoneWork.getText().toString();
 
-                    Calendar calendar = Calendar.getInstance();
-                    int tHour = calendar.get(Calendar.HOUR_OF_DAY);
-
-                    if (tHour <= 21) {
-                        Toast.makeText(
-                                update.getContext(),
-                                R.string.only_after_9,
-                                Toast.LENGTH_LONG).show();
-                    } else if (newDone.isEmpty() || workDetails.getText().toString().isEmpty()) {
+                    if (newDone.isEmpty() || workDetails.getText().toString().isEmpty()) {
                         Toast.makeText(
                                 update.getContext(),
                                 R.string.empty_not_saved,
@@ -65,12 +57,15 @@ public class a4_viewholder extends RecyclerView.ViewHolder {
                     } else {
                         targetRepository.updateAddToDoneWork(Integer.parseInt(newDone), id);
                         doneRepository.insert(new DoneTable(
-                                targetNameS, workDetails.getText().toString().trim(), "09-Mar-2022"
+                                targetNameS, workDetails.getText().toString().trim(), Universal.TODAY
                         ));
                         newDoneWork.clearFocus();
                         workDetails.clearFocus();
+                        Toast.makeText(
+                                update.getContext(),
+                                "Updated",
+                                Toast.LENGTH_LONG).show();
                     }
-
 
                     update.setVisibility(View.GONE);
                 }

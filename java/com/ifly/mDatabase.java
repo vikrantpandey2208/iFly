@@ -33,7 +33,6 @@ public abstract class mDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             mDatabase.class, "ifly_database")
                             .addCallback(DatabaseCallback)
-                            .fallbackToDestructiveMigration()
                             .createFromAsset("schedule_db.db")
                             .build();
                 }
